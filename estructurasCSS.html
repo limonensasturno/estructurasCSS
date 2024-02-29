@@ -8,7 +8,7 @@
     <!-- <link rel="stylesheet" href="tu-archivo.css"> -->
     <style>
         body{
-         background: #04124f;
+         background: #181818;
          margin: 0;
          padding: 0;
          color: #f8f8f8;
@@ -19,31 +19,15 @@
         }
         nav{
           background: #4993ef;
-          padding: 1em;
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 20%;
-          height: 600px;
-        }
-        header,section,footer{
-          height: 200px;  
         }
         header{
             background: darkgreen;
-            padding: 1em;
         }
-        section{
+        .seccion{
             background: #ff4d00;
-            padding: 1em;
         }
         footer{
             background: #d28eff;
-            padding: 1em;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
         }
         a{
             color: #f8f8f8;
@@ -51,7 +35,40 @@
         li{
             text-align: left;
         }
- 
+        header, .seccion, footer, nav{
+          padding: 1em;
+        }
+        @media screen and (min-width: 600px){
+         /*Aqui inician los estilos de tablet*/  
+        nav{
+          float: left;
+          width: 20%;
+          height: 600px;
+        }  
+        header, .seccion,footer{
+          height: 200px;
+        }
+        footer{
+            clear: left;
+        }
+        /*Aqui termina los estilos de tablet*/
+        }
+        @media screen and (min-width: 1024px){
+         /*Aqui inician los estilos de desktop*/  
+        nav{
+          background: #ff6700;
+        }
+        header{
+            background: rgb(147, 65, 255);
+        }
+        .seccion{
+            background: #2233d1;
+        }
+        footer{
+            background: #68f952;
+        }
+        /*Aqui termina los estilos de desktop*/
+        }
     </style>
 </head>
 <body>
@@ -73,16 +90,18 @@
             </ul>
         </nav>
 
-    <!-- Primera Seccion -->
         <section>
-            <h2>Seccion 1</h2>
-            <p>Contenido de la primera seccion.</p>
+            <!-- Primera Seccion -->
+            <section class="seccion">
+                <h2>Seccion 1</h2>
+                <p>Contenido de la primera seccion.</p>
             </section>
 
-        <!-- Segunda Seccion -->
-        <section>
-            <h2>Seccion 2</h2>
-            <p>Contenido de la segunda seccion.</p>
+            <!-- Segunda Seccion -->
+            <section class="seccion">
+                <h2>Seccion 2</h2>
+                <p>Contenido de la segunda seccion.</p>
+            </section>
         </section>
     <main>
     <!-- Pie de Pagina (Footer) -->
