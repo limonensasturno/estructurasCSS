@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tu Pagina</title>
     <!-- Puedes agregar enlaces a tus estilos CSS aqui -->
-    <!-- <link rel="stylesheet" href="tu-archivo.css"> -->
+    <link rel="stylesheet" href="flexboxgrid.min.css">
     <style>
         body{
          background: #181818;
@@ -40,15 +40,6 @@
         }
         @media screen and (min-width: 600px){
          /*Aqui inician los estilos de tablet*/  
-        main{
-            display: flex;
-        }
-        nav{
-          width: 20%;
-        } 
-         main > section{
-            flex: 1;
-        }
         header, .seccion,footer{
           height: 200px;
         }
@@ -78,15 +69,17 @@
 <body>
 
     <!-- Encabezado (Header) -->
-    <header>
-        <h1>Limón en Saturno</h1>
-        <p>Descripcion breve de tu sitio web</p>
-    </header>
+    <div class="row">
+        <header class="col-xs-12">
+            <h1 class="box">Limón en Saturno</h1>
+            <p>Descripcion breve de tu sitio web</p>
+        </header>
+    </div>
 
     <!-- Barra de Navegacion -->
-    <main>
-        <nav>
-            <ul>
+    <main class="row">
+        <nav class="col-xs-12 col-sm-3 col-lg-2">
+            <ul class="box">
                 <li><a href="#">Fotos análogas</a></li>
                 <li><a href="#">Rock playlist</a></li>
                 <li><a href="#">Café</a></li>
@@ -94,25 +87,26 @@
             </ul>
         </nav>
 
-        <section>
+        <section class="col-xs-12 col-sm-9 col-lg-10">
             <!-- Primera Seccion -->
-            <section class="seccion">
-                <h2>Seccion 1</h2>
+            <section class="seccion box">
+                <h2>Galeria</h2>
                 <p>Contenido de la primera seccion.</p>
             </section>
 
             <!-- Segunda Seccion -->
-            <section class="seccion">
+            <section class="seccion box">
                 <h2>Seccion 2</h2>
                 <p>Contenido de la segunda seccion.</p>
             </section>
         </section>
     </main>
     <!-- Pie de Pagina (Footer) -->
-    <footer>
-        <p>&copy; 2024 Tu Pagina. Todos los derechos reservados.</p>
-        <!-- Puedes agregar mas contenido o enlaces aqui -->
-    </footer>
-
+    <div class="row">
+        <footer class="col-xs-12">
+            <p class="box">&copy; 2024 Tu Pagina. Todos los derechos reservados.</p>
+            <!-- Puedes agregar mas contenido o enlaces aqui -->
+        </footer>
+    </div>
 </body>
 </html>
